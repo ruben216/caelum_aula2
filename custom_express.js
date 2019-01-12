@@ -16,6 +16,14 @@ function expressConfigurado(){
   require('./routes/produto')(app);
   //equivalente a const rotaProdutos = require('./rota/produtos')
   //rotaProdutos(app);
+  app.use(function (error,request,response,next){
+    let erro = "Página não encontrada. Tente outra vez..."
+    response.status(404).render('error',{erro})
+    
+  })
+
+  app.use
+
   return app;
   
 }
