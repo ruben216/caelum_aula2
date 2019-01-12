@@ -5,10 +5,9 @@ module.exports = function(app){
     //response.render('produto');
     
     const conexao = require('../config/connectionFactory');
-    const ProdutoDao = require('../repository/produtoDAO');
-    const produtoDao = new ProdutoDao(conexao);
 
-    produtoDao.listar( (erro,resultados) => {
+    conexao.query(
+      'SELECT * FROM livros', (erro,resultados) => {
         //console.log(resultados);
         if (erro) throw 'ERRORRR';
         response.render('produto',{Lista : resultados});
