@@ -1,0 +1,23 @@
+{
+  "name": "scripts_node",
+  "version": "1.0.0",
+  "description": "Gerenciador de pacotes do Node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dev": "nodemon app.js",
+    "dev2": "nodemon app.js"
+  },
+  "author": "Ruben V.",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  }
+}

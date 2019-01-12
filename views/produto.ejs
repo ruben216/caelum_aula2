@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+</head>
+<body>
+  
+    <div class="container">
+        <h1>Lista de Produtos</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Preço</th>
+                    <th>Descrição</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <%for(let livro of Lista){%>
+                    <tr>
+                        <td><%= livro.titulo %></td>
+                        <td><%= livro.preco %></td>
+                        <td><%= livro.descricao %></td>
+                    </tr>
+                <%}%>
+            </tbody>
+
+        </table>
+    <!--<%= Lista[0].titulo %>-->
+
+
+    </div>
+
+</body>
+</html>
